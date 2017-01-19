@@ -6,6 +6,7 @@
 		<script src="assets/js/jquery.hueristics.1.0.js"></script>
 	</head>
 	<body>
+	<div id="git"></div>
 	<div id="mask"></div>
 	<div class="stars" id="back"></div>
 	<div class="stars" id="middle"></div>
@@ -20,6 +21,12 @@
 		// which will 'shine' through the transparent
 		// body background image.
 		$('body').hueristics();
+
+        $('div#git').hueristics({reverse:true});
+        $('div#git').on('click', function(){
+				location.href='https://github.com/stevereich/hueristics';
+			});
+
 
 		// unneccesary (but fun!) function to swirl the stars
 		var s=0,b=0,m=0,f=0,timer;
@@ -39,6 +46,8 @@
 		}
 		stars(0,0,0,[.5,-.5,-1]);
 		// end star animate function
+
+
 	})
 	</script>
 	</body>

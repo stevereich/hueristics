@@ -101,7 +101,6 @@
 					a = (a != endColor[3]) ? (alphaDirection == 'd') ? ((startColor[3] - (alphaStep/eachStep)) < endColor[3]) ? endColor[3] : startColor[3] - (alphaStep/eachStep) : ((startColor[3] + 1) > endColor[3]) ? endColor[3] : startColor[3] + (alphaStep/eachStep) : endColor[3];
 					config.el.css(settings.property,'hsla('+h+','+s+'%,'+l+'%,'+a+')');
 					moveTo([h,s,l,a],endColor);
-					console.log(h,s,l,a);
 				},config.speed)
 			}
 			else{
@@ -110,10 +109,6 @@
 		},
 		doHue = function(){
 			setInterval(function(){
-				// if(settings['moveVal']=='saturation' || settings['moveVal']=='lightness'){
-				// 	config.dir = (settings[settings['moveVal']] == 100) ? 'd' : config.dir;
-				// 	config.dir = (settings[settings['moveVal']] == 0) ? 'u' : config.dir;
-				// }
 	            settings[settings['moveVal']] = (config.dir=='u') ? settings[settings['moveVal']]-=settings.step : settings[settings['moveVal']]+=settings.step;
 	            config.el.css(settings.property,'hsla('+settings.hue+','+settings.saturation+'%,'+settings.lightness+'%,'+settings.alpha+')');
 	        },config.speed)
