@@ -39,7 +39,7 @@ div#git {
 	width:204px;
 	height:47px;
 	transform: rotate(-45deg);
-	position:absolute;
+	position:fixed;
 	top:33px;
 	left:-46px;
 	background-image: url(../img/git.png);
